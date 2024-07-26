@@ -153,6 +153,12 @@ when you need as much details as po
 
 `getSingle(): Sieve` method to get Sieve singleton instance
 
+---
+
+**createAutoReportTrigger**
+
+`createAutoReportTrigger(triggerType: AutoReportTriggerType, value?: number): SieveAutoReportTrigger` method to create auto-report trigger instead constructor creation to make code more simple
+
 ### Public static props
 
 **Types**
