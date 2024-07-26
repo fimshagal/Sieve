@@ -56,11 +56,11 @@ sieve.init({
     // triggers to launch auto reporting
     autoReportTriggers: [
         // launch auto report by time interval
-        new SieveAutoReportTrigger(Sieve.AutoReportTriggerTypes.TimeInterval, 10000),
+        Sieve.createAutoReportTrigger(Sieve.AutoReportTriggerTypes.TimeInterval, 10000),
         // launch auto report by panic error
-        new SieveAutoReportTrigger(Sieve.AutoReportTriggerTypes.Panic),
+        Sieve.createAutoReportTrigger(Sieve.AutoReportTriggerTypes.Panic),
         // launch auto report by cetrain quantity of errors
-        new SieveAutoReportTrigger(Sieve.AutoReportTriggerTypes.ErrorsQuantity, 10),
+        Sieve.createAutoReportTrigger(Sieve.AutoReportTriggerTypes.ErrorsQuantity, 10),
     ]
 });
 ```
