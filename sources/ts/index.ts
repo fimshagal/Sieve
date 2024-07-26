@@ -17,9 +17,9 @@ import { SieveAutoReportTrigger } from "./sieve/sieve.auto.report.trigger";
         responseResolution: Sieve.ResponseResolutions.High,
         panicMessages: [/Customchik/g],
         autoReportTriggers: [
-            new SieveAutoReportTrigger(Sieve.AutoReportTriggerTypes.TimeInterval, 10000),
-            new SieveAutoReportTrigger(Sieve.AutoReportTriggerTypes.Panic),
-            new SieveAutoReportTrigger(Sieve.AutoReportTriggerTypes.ErrorsQuantity, 10),
+            Sieve.createAutoReportTrigger(Sieve.AutoReportTriggerTypes.TimeInterval, 10000),
+            Sieve.createAutoReportTrigger(Sieve.AutoReportTriggerTypes.Panic),
+            Sieve.createAutoReportTrigger(Sieve.AutoReportTriggerTypes.ErrorsQuantity, 10)
         ],
     });
 

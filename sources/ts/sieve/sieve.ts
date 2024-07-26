@@ -87,6 +87,10 @@ export class Sieve implements ISieve {
         return Sieve._singleInstance;
     }
 
+    public static createAutoReportTrigger(triggerType: AutoReportTriggerType, value?: number): SieveAutoReportTrigger {
+        return new SieveAutoReportTrigger(triggerType, value);
+    }
+
     private applyConfig(config: SieveInitConfig): void {
         const {
             sign,
