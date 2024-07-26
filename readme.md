@@ -50,7 +50,7 @@ sieve.init({
     // make sieve able to print some debug message
     debug: true,
     // make certain types error disappear from log trace
-    excludeTypes: [Sieve.Types.Reference],
+    excludeTypes: [Sieve.Types.Eval, Sieve.Types.Unknown],
     // make error with certain message disappear from log trace
     excludeMessages: ["undefined is not a function"],
     // triggers to launch auto reporting
