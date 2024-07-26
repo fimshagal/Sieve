@@ -147,6 +147,13 @@ when you need as much details as po
 
 `onAutoReport: Signal<SieveReport>` signal that trigger when auto-report is ready
 
+---
+
+**trace**
+
+`trace: SieveResponseResolutions[]` getter that contain all the error events
+
+
 ### Public static methods
 
 **getSingle**
@@ -158,6 +165,7 @@ when you need as much details as po
 **createAutoReportTrigger**
 
 `createAutoReportTrigger(triggerType: AutoReportTriggerType, value?: number): SieveAutoReportTrigger` method to create auto-report trigger instead constructor creation to make code more simple
+
 
 ### Public static props
 
@@ -177,16 +185,20 @@ when you need as much details as po
 
 `AutoReportTriggerTypes: Dictionary<AutoReportTriggerType>` prop contains all the auto report trigger's types
 
+
 ### Errors types
 
 Errors can be `Unknown`, `Reference`, `Syntax`, `Type`, `Range`, `Eval`, `Uri`, `ByEmit`
+
 
 ### Response resolutions
 
 Response resolutions can be `Unknown`, `Low`, `Medium`, `High`
 
+
 ### Auto-report trigger's types
 
 Auto-report trigger's types are `Unknown`, `TimeInterval`, `ErrorsQuantity`, `Panic`
+
 
 ### Init config props description
