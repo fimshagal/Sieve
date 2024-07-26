@@ -84,3 +84,18 @@ Also you can get some error trace report by getter 'report'
     
     console.log(sieve.report); 
 ```
+
+## Launch sandbox
+Download project and then use
+
+```shell
+npm i
+```
+
+and then
+
+```shell
+npm run start
+```
+
+Modify `index.ts` file in the root of `sources` folder to change something in the sandbox
