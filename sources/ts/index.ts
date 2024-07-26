@@ -25,10 +25,12 @@ import { SieveAutoReportTrigger } from "./sieve/sieve.auto.report.trigger";
 
     setTimeout(() => {
         let z = {};
+        // @ts-ignore
         z.a = z.b.a - 1;
     }, 3000);
 
     window.onclick = () => {
+        // @ts-ignore
         a + b;
     };
 
