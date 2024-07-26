@@ -1,7 +1,7 @@
 # Sieve
 
 ## What is it
-It is module to pre-handle errors before sending it to Sentry or other service to reduce spends and economy businesses resources
+It is module to pre-handle errors before sending it to Sentry or other service to reduce spends and save businesses resources
 
 ## How to use
 
