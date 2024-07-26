@@ -27,7 +27,7 @@ sieve.onError.add((errorData: SieveResponseResolutions) => {
 
 ```ts
 import {Sieve} from "./sieve";
-import {SieveReport, SieveResponseResolutions} from "./lib";
+import {SieveReport, SieveResponseResolution} from "./lib";
 
 const sieve: Sieve = Sieve.getSingle();
 
@@ -39,9 +39,9 @@ sieve.init({
     preventErrorsDefault: true,
     // put you 'onError" callback right here
     // but you still able to add more callbacks with external signal
-    onError: (errorData: SieveResponseResolutions): void => console.log(errorData),
+    onError: (errorData: SieveResponseResolution): void => console.log(errorData),
     // put you 'onPanic" callback right here in case of critical error
-    onPanic: (errorData: SieveResponseResolutions): void => console.log(errorData),
+    onPanic: (errorData: SieveResponseResolution): void => console.log(errorData),
     // your auto report for expansive Sentry is here!
     onAutoReport: (report: SieveReport): void => console.log(SieveReport),
     // you can change level of details for error report
@@ -99,3 +99,88 @@ npm run start
 ```
 
 Modify `index.ts` file in the root of `sources` folder to change something in the sandbox
+
+
+## Docs
+
+### Public methods
+
+**init**
+
+`init(config: Nullable<SieveInitConfig>):void` method which will be used once for initialization Sieve singleton. 
+You can call it either with config or without it 
+
+---
+
+**setResponseResolution**
+
+`setResponseResolution(resolution: SieveResponseResolution): void` method to change response resolution mode or response's level of details 
+when you need as much details as po
+
+---
+
+**emitError**
+
+`emitError(message: SieveEmitErrorConfig): void` method to create your own synthetic error event with features
+
+---
+
+**filterTrace**
+
+`filterTrace(mask: SieveErrorType): SieveResponseResolutions[]` method to filter result of trace's getter
+
+### Public props
+
+**onError**
+
+`onError: Signal<SieveResponseResolutions>` signal that trigger on any error
+
+---
+
+**onPanic**
+
+`onPanic: Signal<SieveResponseResolutions>` signal that trigger on error with the highest priority
+
+---
+
+**onAutoReport**
+
+`onAutoReport: Signal<SieveReport>` signal that trigger when auto-report is ready
+
+### Public static methods
+
+**getSingle**
+
+`getSingle(): Sieve` method to get Sieve singleton instance
+
+### Public static props
+
+**Types**
+
+`Types: Dictionary<SieveErrorType>` prop contains all the error types
+
+---
+
+**ResponseResolutions**
+
+`ResponseResolutions: Dictionary<SieveResponseResolution>` prop contains all the responses resolutions
+
+---
+
+**AutoReportTriggerTypes**
+
+`AutoReportTriggerTypes: Dictionary<AutoReportTriggerType>` prop contains all the auto report trigger's types
+
+### Errors types
+
+Errors can be `Unknown`, `Reference`, `Syntax`, `Type`, `Range`, `Eval`, `Uri`, `ByEmit`
+
+### Response resolutions
+
+Response resolutions can be `Unknown`, `Low`, `Medium`, `High`
+
+### Auto-report trigger's types
+
+Auto-report trigger's types are `Unknown`, `TimeInterval`, `ErrorsQuantity`, `Panic`
+
+### Init config props description
