@@ -1,7 +1,6 @@
 import { onDocReady } from "./utils";
 import { Sieve } from "./sieve";
 import { SieveReport, SieveResponseResolutions} from "./sieve/lib";
-import { SieveAutoReportTrigger } from "./sieve/sieve.auto.report.trigger";
 
 (async (): Promise<void> => {
     await onDocReady();
