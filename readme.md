@@ -65,17 +65,7 @@ sieve.init({
 });
 ```
 
-There are several data-object inside Sieve as static props
-
-```ts
-    // Response resolutions
-    Sieve.ResponseResolutions.Low;
-
-    // Errors types
-    Sieve.Types.Eval;
-```
-
-Also you can get some error trace report by getter 'report'
+Also you can get whole error's trace report by getter 'report'
 
 ```ts
     import { Sieve } from "./sieve";
