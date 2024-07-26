@@ -1,0 +1,22 @@
+{
+  "name": "oko",
+  "version": "0.0.1",
+  "description": "",
+  "source": "sources/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "parcel": "^2.12.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "signal-ts": "^1.2.4",
+    "worker-timers": "^8.0.3"
+  }
+}

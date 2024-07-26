@@ -1,0 +1,1 @@
+export const genSingletonLock = (prefix: string): string => `${prefix}${crypto.randomUUID()}`;

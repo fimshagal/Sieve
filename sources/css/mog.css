@@ -1,0 +1,77 @@
+.mog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1.5vmax;
+    background: rgb(231, 231, 231);
+    z-index: 10000;
+}
+
+.mog-logo {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 0.3vmax;
+    color: #6b6b6b;
+}
+
+.mog-desktop {
+    visibility: hidden;
+    pointer-events: none;
+    overflow: hidden;
+    height: 0;
+}
+
+.mog-entries {
+    padding: 1.25vmax 1.5vmax 1vmax 1.5vmax;
+    display: block;
+    overflow: auto;
+    max-height: 50vh;
+}
+
+.mog-entry + .mog-entry {
+    margin-top: 0.75vmax;
+}
+
+.mog-entry-type-undefined,
+.mog-entry-type-null {
+    color: #8c8c8c;
+}
+
+.mog-entry-type-number {
+    color: #3d95d2;
+}
+
+.mog-entry-type-string,
+.mog-entry-type-symbol {
+    color: #418f0a;
+}
+
+.mog-collapsed-view .mog-entries {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+}
+
+.mog-button,
+.mog-button:focus,
+.mog-button:hover,
+.mog-button:active {
+    outline: none;
+}
+
+.mog-button-toggle-view {
+    font-size: 1.5em;
+    background: rgb(183, 183, 183);
+    color: #6b6b6b;
+    font-weight: bold;
+}
+
+.mog-group-header {
+    padding: 0 1.5vmax;
+    background: rgb(183, 183, 183);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
